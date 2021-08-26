@@ -1,9 +1,13 @@
 
 const request = require('request');
 const fs = require('fs')
+const args = process.argv;
 
-let url = 'https://www.example.edu'
-let fileLocation = '/Users/caitohenry/Lighthouse/w2/d3-net/page-fetcher/index.html'
+let url = args[2];
+let fileLocation = args[3];
+
+// let url = 'https://www.example.edu'
+// let fileLocation = '/Users/caitohenry/Lighthouse/w2/d3-net/page-fetcher/index.html'
 
 request(url, (error, response, body) => {
 
